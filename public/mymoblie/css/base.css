@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mui-header {
+  background-color: #006699;
+  position: fixed;
+  height: 44px;
+  top: 0;
+  padding: 0 10px;
+}
+.mui-header > h1 {
+  color: white;
+}
+.mui-header .bgcolor {
+  color: white;
+}
+.mui-nav {
+  background-color: #006699;
+}
+.mui-nav .mui-tab-item {
+  color: white;
+}
+.mui-nav .mui-tab-item .mui-left4 {
+  padding-left: 0px;
+}
+.mui-nav .mui-tab-item.mui-active {
+  color: darkorange;
+}
+.mui-shopping {
+  display: block;
+  font-size: 12px;
+}
+/*# sourceMappingURL=base.css.map */

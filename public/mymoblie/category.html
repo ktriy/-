@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乐淘</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ba.css">
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/category.js"></script>
+
+</head>
+<body>
+<header class="mui-bar mui-bar-nav mui-header">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">乐淘云购</h1>
+    <a href="javascript:;" class="mui-icon mui-icon-search mui-pull-right"></a>
+</header>
+<nav class="mui-bar mui-bar-tab mui-nav">
+    <a class="mui-tab-item mui-active" href="javascript:;">
+        <span class="mui-icon mui-icon-home mui-left"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item" href="javascript:;">
+        <span class="mui-icon mui-icon-bars mui-left"></span>
+        <span class="mui-tab-label">分类</span>
+    </a>
+    <a class="mui-tab-item" href="javascript:;">
+        <span class="fa fa-shopping-cart "></span>
+        <span class="mui-tab-label mui-shopping">购物车</span>
+    </a>
+    <a class="mui-tab-item" href="javascript:;">
+        <span class="mui-icon mui-icon-person mui-left"></span>
+        <span class="mui-tab-label">会员</span>
+    </a>
+</nav>
+<div class="category-content">
+    <div class="mui-left1">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="waper" id ="waper">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mui-right2">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-right-22">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/artTemplate/template-web.js"></script>
+<script type="text/template" id="tpl">
+    {{each data}}
+         <li>
+            <a href="javascript:;" data-id="{{$value.id}}">{{$value.categoryName}}
+            </a>
+         </li>
+    {{/each}}
+</script>
+<script type="text/template" id="second">
+    {{each list}}
+        <li>
+            <a href="javascript:;">
+                <img src="{{$value.brandLogo}}" alt="">
+                <span>{{$value.brandName}}</span>
+            </a>
+        </li>
+    {{/each}}
+    {{if(!list.length)}}
+        <span>暂无内容</span>
+   {{/if}}
+</script>
+</body>
+</html>
